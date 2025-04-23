@@ -16,7 +16,7 @@ const SpectroscopyTabs = ({ smiles }: SpectroscopyTabsProps) => {
   return (
     <div className="space-y-6">
       <MoleculeDisplay smiles={smiles} />
-      
+      <div className="">HELLO</div>
       <Tabs 
         defaultValue="ir" 
         value={activeTab}
