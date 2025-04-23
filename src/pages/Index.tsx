@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import MoleculeInput from "@/components/MoleculeInput";
 import SpectroscopyTabs from "@/components/SpectroscopyTabs";
@@ -20,17 +19,25 @@ const Index = () => {
   };
 
   return (
-    <div className="container mx-auto py-8 px-4">
-      <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-primary mb-2">
-          Spectroscopy Simulator
-        </h1>
-        <p className="text-muted-foreground">
-          Simulate IR, UV-Vis and NMR spectra for molecules
-        </p>
+    <div className="container mx-auto py-12 px-4">
+      <header className="text-center mb-4 space-y-1">
+        <div className="inline-block">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            SpectraLab
+          </h1>
+        </div>
+        <div className="max-w-2xl mx-auto space-y-6">
+          <p className="text-xl text-muted-foreground">
+            Advanced spectral analysis with AI
+          </p>
+          <p className="text-sm text-muted-foreground/80 italic">
+            Simulate and analyze IR, UV-Vis, and NMR spectra for any molecule instantly
+          </p>
+        </div>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* ... existing code ... */}
         <div className="md:col-span-1">
           <div className="sticky top-4">
             <MoleculeInput 

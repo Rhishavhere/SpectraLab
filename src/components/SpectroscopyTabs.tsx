@@ -16,7 +16,7 @@ const SpectroscopyTabs = ({ smiles }: SpectroscopyTabsProps) => {
   return (
     <div className="space-y-6">
       <MoleculeDisplay smiles={smiles} />
-      <div className="">HELLO</div>
+      <div className="text-2xl font-semibold">Spectrum</div>
       <Tabs 
         defaultValue="ir" 
         value={activeTab}
@@ -25,13 +25,13 @@ const SpectroscopyTabs = ({ smiles }: SpectroscopyTabsProps) => {
       >
         <TabsList className="grid grid-cols-3 w-full mb-4">
           <TabsTrigger value="ir" className="text-base">
-            IR Spectrum
+            IR
           </TabsTrigger>
           <TabsTrigger value="uv" className="text-base">
-            UV-Vis Spectrum
+            UV-Vis
           </TabsTrigger>
           <TabsTrigger value="nmr" className="text-base">
-            NMR Spectrum
+            NMR
           </TabsTrigger>
         </TabsList>
         

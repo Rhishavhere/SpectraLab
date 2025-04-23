@@ -7,7 +7,7 @@ interface SpectrumPlaceholderProps {
 
 const SpectrumPlaceholder = ({ type }: SpectrumPlaceholderProps) => {
   const colorMap = {
-    "IR": "bg-ir/10 border-ir text-ir-dark",
+    "IR": "bg-[#89dd4f]/10 border-[#89dd4f] text-[#386f11]",
     "UV-Vis": "bg-uv/10 border-uv text-uv-dark",
     "NMR": "bg-nmr/10 border-nmr text-nmr-dark"
   };
