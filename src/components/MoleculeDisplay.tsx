@@ -37,7 +37,7 @@ const MoleculeDisplay = ({ smiles }: MoleculeDisplayProps) => {
       // Initialize Gemini AI client
       const apiKey = import.meta.env.GENAI;
       if (!apiKey) {
-        throw new Error("Gemini API key (VITE_GEMINI_API_KEY) is missing.");
+        throw new Error("API key is missing.");
       }
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" }); // Or your preferred model
