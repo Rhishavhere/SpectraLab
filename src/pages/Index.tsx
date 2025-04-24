@@ -52,7 +52,7 @@ const Index = () => {
         <div className="md:col-span-2">
           <div className="bg-card rounded-lg shadow p-6">
             <h2 className="text-2xl font-semibold mb-4">
-              {moleculeName || "Spectral Data"}
+              {moleculeName || "Molecule"}
             </h2>
             <SpectroscopyTabs smiles={molecule} />
           </div>

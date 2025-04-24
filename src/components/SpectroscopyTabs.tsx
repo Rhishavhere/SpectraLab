@@ -1,54 +1,31 @@
-
-import { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import IRSpectrum from "./spectra/IRSpectrum";
 import UVSpectrum from "./spectra/UVSpectrum";
 import NMRSpectrum from "./spectra/NMRSpectrum";
 import MoleculeDisplay from "./MoleculeDisplay";
 
-interface SpectroscopyTabsProps {
+interface SpectroscopyDisplayProps {
   smiles: string;
 }
 
-const SpectroscopyTabs = ({ smiles }: SpectroscopyTabsProps) => {
-  const [activeTab, setActiveTab] = useState("ir");
-  
+const SpectroscopyDisplay = ({ smiles }: SpectroscopyDisplayProps) => {
   return (
     <div className="space-y-6">
       <MoleculeDisplay smiles={smiles} />
-      <div className="text-2xl font-semibold">Spectrum</div>
-      <Tabs 
-        defaultValue="ir" 
-        value={activeTab}
-        onValueChange={setActiveTab}
-        className="w-full"
-      >
-        <TabsList className="grid grid-cols-3 w-full mb-4">
-          <TabsTrigger value="ir" className="text-base">
-            IR
-          </TabsTrigger>
-          <TabsTrigger value="uv" className="text-base">
-            UV-Vis
-          </TabsTrigger>
-          <TabsTrigger value="nmr" className="text-base">
-            NMR
-          </TabsTrigger>
-        </TabsList>
-        
-        <TabsContent value="ir" className="mt-4">
-          <IRSpectrum smiles={smiles} />
-        </TabsContent>
-        
-        <TabsContent value="uv" className="mt-4">
-          <UVSpectrum smiles={smiles} />
-        </TabsContent>
-        
-        <TabsContent value="nmr" className="mt-4">
-          <NMRSpectrum smiles={smiles} />
-        </TabsContent>
-      </Tabs>
+      <div className="text-2xl font-semibold">Spectral Data </div>
+      <div className="mt-4">
+        <div className="font-semibold mb-2">IR Spectrum</div>
+        <IRSpectrum smiles={smiles} />
+      </div>
+      <div className="mt-4">
+        <div className="font-semibold mb-2">UV-Vis Spectrum</div>
+        <UVSpectrum smiles={smiles} />
+      </div>
+      <div className="mt-4">
+        <div className="font-semibold mb-2">NMR Spectrum</div>
+        <NMRSpectrum smiles={smiles} />
+      </div>
     </div>
   );
 };
 
-export default SpectroscopyTabs;
+export default SpectroscopyDisplay;

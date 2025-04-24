@@ -35,7 +35,7 @@ const MoleculeDisplay = ({ smiles }: MoleculeDisplayProps) => {
 
     try {
       // Initialize Gemini AI client
-      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      const apiKey = import.meta.env.GENAI;
       if (!apiKey) {
         throw new Error("Gemini API key (VITE_GEMINI_API_KEY) is missing.");
       }

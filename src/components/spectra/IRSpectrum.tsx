@@ -258,7 +258,7 @@ const IRSpectrum = ({ smiles, className }: IRSpectrumProps) => {
             {/* Peaks markers, lines, and text labels */}
             <TooltipProvider>
               {renderedPeaks.map((peak, i) => {
-                const labelYOffset = -25; // How far above the line end the text appears
+                const labelYOffset = -10; // How far above the line end the text appears
                 const lineEndYOffset = -5; // How far above the marker the line ends
                 const markerRadius = 3; // Smaller marker
 
@@ -280,7 +280,7 @@ const IRSpectrum = ({ smiles, className }: IRSpectrumProps) => {
                       textAnchor="middle"
                       fontSize="11"
                       fontWeight="medium"
-                      fill="#FFFFFF" // White text
+                      fill="#c8c8c8" // White text
                     >
                       {peak.assignment}
                     </text>
