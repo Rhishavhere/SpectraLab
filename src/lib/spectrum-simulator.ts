@@ -1,4 +1,3 @@
-// src/lib/spectrum-simulator.ts
 
 // --- Shared Interfaces & Types ---
 
